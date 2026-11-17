@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brushify</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <center>
+        <h1><i>Brushify</i></h1>
+        <div id="editor" contenteditable="true"></div>
+
+        <br><br>
+
+        <button id="download-bt">Download</button>
+
+        <br><br><br><br>
+
+        <div id="second">
+            <div id="bg-color">
+                <h2>Choose Background Color :</h2>
+                <button onclick="changeBackgroundColor('red')" class="bgc" style="background-color: red;"></button>
+                <button onclick="changeBackgroundColor('lightblue')" class="bgc" style="background-color: lightblue;"></button>
+                <button onclick="changeBackgroundColor('yellowgreen')" class="bgc" style="background-color: yellowgreen;"></button>
+                <button onclick="changeBackgroundColor('hotpink')" class="bgc" style="background-color: hotpink;"></button>
+                <button onclick="changeBackgroundColor('purple')" class="bgc" style="background-color: purple;"></button>
+            </div>
+
+            <div id="text-color">
+                <h2>Choose Text Color :</h2>
+                <button onclick="changeTextColor('brown')" class="textc" style="background-color: brown;"></button>
+                <button onclick="changeTextColor('blue')" class="textc" style="background-color: blue;"></button>
+                <button onclick="changeTextColor('green')" class="textc" style="background-color: green"></button>
+                <button onclick="changeTextColor('orange')" class="textc" style="background-color: orange"></button>
+                <button onclick="changeTextColor('pink')" class="textc" style="background-color: pink"></button>
+            </div>
+
+            <div id="font-style">
+                <h2>Choose Font Style :</h2>
+                <button onclick="changeFontStyle('Arial')" class="font-style-btn" font-family="Arial">Hello</button>
+                <button onclick="changeFontStyle('Verdana')" class="font-style-btn" font-family="Verdana">Hello</button>
+                <button onclick="changeFontStyle('Cursive')" class="font-style-btn" font-family="Cursive">Hello</button>
+                <button onclick="changeFontStyle('Courier New')" class="font-style-btn" font-family="Courier New">Hello</button>
+                <button onclick="changeFontStyle('Georgia')" class="font-style-btn" font-family="Georgia">Hello</button>
+
+            </div>
+        </div>
+
+    </center>
+
+    <script>
+        function changeBackgroundColor(clr) {
+            document.getElementById('editor').style.backgroundColor = clr;
+        }
+
+        function changeTextColor(clr) {
+            document.getElementById('editor').style.color = clr;
+        }
+
+        function changeFontStyle(font) {
+            document.getElementById('editor').style.fontFamily = font;
+        }
+    </script>
+</body>
+
+</html>
